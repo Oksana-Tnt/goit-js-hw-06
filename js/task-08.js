@@ -18,5 +18,6 @@ function onForm(event){
     };
 
     console.log(data); 
-    console.dir(event);
+
+    event.currentTarget.reset();
 }
