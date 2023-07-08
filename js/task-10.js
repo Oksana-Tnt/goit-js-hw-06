@@ -17,8 +17,7 @@ refs.destroyBtnEl.addEventListener("click", onDestroyBoxes);
 
 
 function onCreateBoxes(event){
- let amount = refs.divControlsEl.firstElementChild.value;  
-  refs.divBoxesEl.insertAdjacentHTML("beforeend", createBoxes(amount));
+  refs.divBoxesEl.insertAdjacentHTML("beforeend", createBoxes(refs.divControlsEl.firstElementChild.value));
 };
 
 function createBoxes(amount){  
@@ -30,5 +29,5 @@ function createBoxes(amount){
 };
 
 function onDestroyBoxes(){
-  refs.divBoxesEl.removeEventListener("click", onCreateBoxes);
+  refs.divBoxesEl.innerHTML = "";
 }
