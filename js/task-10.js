@@ -21,6 +21,7 @@ function onCreateBoxes(event){
 };
 
 function createBoxes(amount){  
+  refs.divBoxesEl.innerHTML="";
   let markup = "";
   for ( let i=1, j=30; i<=amount; i+=1, j+=10){
    markup += `<div style="background-color:${getRandomHexColor()}; width : ${j}px; height : ${j}px">hi</div>`;
