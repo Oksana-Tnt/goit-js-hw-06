@@ -6,16 +6,15 @@ function onCheckValidInput (event){
    
     if(event.currentTarget.value.length !== Number(event.currentTarget.getAttribute("data-length"))){
        
-        event.currentTarget.classList.remove("valid");
-        event.currentTarget.classList.add("invalid");          
+        addClass("valid", "invalid");  
 
-
-    } else if (event.currentTarget.value.length === Number(event.currentTarget.getAttribute("data-length")))    
-    {
-        event.currentTarget.classList.remove("invalid");
-        event.currentTarget.classList.add("valid");
+    } else {   
        
+        addClass("invalid","valid");       
     }      
     
-      
+      function addClass(class1, class2){
+        event.currentTarget.classList.remove(class1);
+        event.currentTarget.classList.add(class2);    
+      }
 };
