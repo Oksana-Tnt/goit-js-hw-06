@@ -8,8 +8,8 @@ function onForm(event){
 
     const {email, password} = event.currentTarget.elements;
 
-    if(email.value === "" || password.value === ""){
-        alert ("can't be empty field!");
+    if(email.value.trim() === "" || password.value.trim() === ""){
+        return alert ("can't be empty field!");
     }
 
     const data = {
